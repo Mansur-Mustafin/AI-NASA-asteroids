@@ -8,7 +8,6 @@ import time
 
 class Classifier:
     def __init__(self, path):
-        
         self.model = load(path)
 
     def predict_hazardous(self, features):
@@ -34,7 +33,6 @@ if selected_model_file != 'Select a model...':
     close_approach_date = st.date_input('Close Approach Date')
     close_approach_datetime = datetime.datetime.combine(close_approach_date, datetime.time())
     epoch_date_close_approach = int(close_approach_datetime.timestamp() * 1000)
-
 
     relative_velocity = st.number_input('Relative Velocity km per sec', format="%.2f")
     miss_distance = st.number_input('Miss Distance (kilometers)', format="%.2f")
